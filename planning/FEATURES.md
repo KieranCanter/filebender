@@ -1,8 +1,10 @@
 # Filebender — Comprehensive Feature List
 
-A native, feature-rich Linux file manager built in Zig with GTK4/libadwaita.
-Inspired by Ghostty's native approach, competing with Nautilus/Thunar/Nemo/Dolphin,
-drawing feature inspiration from FilePilot on Windows.
+A native, feature-rich Linux file manager built with GTK4/libadwaita.
+Language: Zig or Odin (decision pending). Architecture: toolkit-agnostic core
+library + GTK4 GUI application. Inspired by Ghostty's philosophy of native feel,
+feature-richness, and standards adherence. Competing with Nautilus/Thunar/Nemo/Dolphin,
+drawing feature inspiration from FilePilot, PCManFM, and SpaceFM.
 
 ## Core Navigation & Browsing
 
@@ -24,20 +26,30 @@ drawing feature inspiration from FilePilot on Windows.
 - Sorting (name, size, date modified, type — ascending/descending)
 - Grouping (by type, date, size range)
 - Filtering by file type / extension
+- Status bar (item count, total size, selection summary)
 
 ## File Operations
 
 - Copy, move, paste, cut
 - Delete (to trash, permanent delete)
+- File conflict resolution (skip, overwrite, rename, merge for directories)
 - Rename (inline)
-- Batch rename (patterns, sequential numbering, date-based — FilePilot-inspired)
+- Batch rename (patterns, sequential numbering, date-based, regex — FilePilot-inspired)
 - Create new file / directory
-- Create symlink
+- Create symlink / hardlink
 - Drag and drop (within app, between panes, from/to external apps)
 - File operation progress (with cancel/pause)
 - Undo / redo file operations
 - Duplicate file
-- Compress / extract archives (zip, tar.gz, etc.)
+- Compress / extract archives (zip, tar.gz, tar.xz, tar.zst)
+
+## Selection
+
+- Multi-select (Shift+Click range, Ctrl+Click toggle)
+- Select all / deselect all
+- Select by extension / pattern
+- Invert selection
+- Selection predicates (size threshold, date range, type)
 
 ## Search
 
@@ -51,15 +63,18 @@ drawing feature inspiration from FilePilot on Windows.
 ## Preview & Inspection
 
 - File inspector / quick preview panel (text, images, folders — FilePilot-inspired)
+- Text preview with syntax highlighting (first N lines)
 - Thumbnail generation (freedesktop thumbnail spec)
 - File properties dialog (size, permissions, timestamps, MIME type)
 - Permissions editing (owner, group, mode)
 - Disk usage / folder size display (usage columns, FilePilot-inspired)
+- Checksum display and verification (MD5, SHA256, SHA512)
 
 ## Command & Keyboard
 
 - Command palette (search all actions, assign hotkeys — FilePilot-inspired)
-- Comprehensive keyboard shortcuts (vim-style optional)
+- Comprehensive keyboard shortcuts
+- Vim-style navigation mode (optional)
 - Configurable keybindings
 - CLI arguments (open path, new tab, new window)
 
@@ -78,13 +93,13 @@ drawing feature inspiration from FilePilot on Windows.
 
 ## Customization & Appearance
 
-- Color themes / dark mode (via libadwaita)
+- Color themes / dark mode (via libadwaita adaptive coloring)
 - Font size and spacing controls
 - Configurable columns in detail view
 - Layout persistence (remember panel arrangement, tab state)
 - Per-directory view settings
 - Disable animations toggle
-- Config file ($XDG_CONFIG_HOME/filebender/config.toml or similar)
+- Config file ($XDG_CONFIG_HOME/filebender/config.toml)
 
 ## Network & Remote
 
@@ -100,6 +115,16 @@ drawing feature inspiration from FilePilot on Windows.
 - Scriptable actions / custom commands
 - Context menu customization (pin actions, search actions — FilePilot-inspired)
 - File tagging / labels
-- Directory watcher (live refresh on filesystem changes)
+- Directory watcher (inotify/fanotify — live refresh on filesystem changes)
 - Hardlink detection (via inode)
 - Symlink resolution and display
+- Git status integration (modified/untracked/ignored markers per file)
+
+## Library (libfilebender — post-1.0)
+
+- C-ABI stable interface for third-party consumers
+- Zero external dependencies (pure language stdlib for all filesystem operations)
+- Pluggable backends (local filesystem, virtual filesystem interface)
+- Platform-agnostic core (Linux-first, but portable data structures)
+- Thread-safe operation primitives
+- Structured error reporting
