@@ -1,0 +1,3 @@
+[D-Bus Service]
+Name=@APPID@
+Exec=@BINDIR@/filebender --gapplication-service

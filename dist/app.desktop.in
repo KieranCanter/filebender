@@ -1,0 +1,14 @@
+[Desktop Entry]
+Type=Application
+Name=@NAME@
+GenericName=File Manager
+Comment=A native, feature-rich file manager for Linux
+Exec=@BINDIR@/filebender %U
+Icon=@APPID@
+Terminal=false
+Categories=System;FileTools;FileManager;GTK;
+MimeType=inode/directory;
+Keywords=file;folder;manager;explorer;
+StartupNotify=true
+DBusActivatable=true
+SingleMainWindow=false
