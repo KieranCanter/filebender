@@ -134,6 +134,7 @@
 - Tree view sidebar
 - Network browsing (SMB, SFTP, FTP, WebDAV)
 - MTP device support
+- Cloud storage integration (Google Drive, OneDrive, Dropbox — via their APIs or FUSE)
 - Embedded terminal panel
 - File tagging / labels
 - Scriptable custom actions (user-defined shell scripts as context menu items)

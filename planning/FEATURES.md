@@ -107,6 +107,7 @@ drawing feature inspiration from FilePilot, PCManFM, and SpaceFM.
 - FTP/SFTP browsing
 - MTP device support (Android phones, cameras)
 - WebDAV
+- Cloud storage (Google Drive, OneDrive, Dropbox — native API or FUSE mount)
 
 ## Advanced / Power User
 
