@@ -1,10 +1,10 @@
 # Filebender — Comprehensive Feature List
 
-A native, feature-rich Linux file manager built with GTK4/libadwaita.
-Language: Zig or Odin (decision pending). Architecture: toolkit-agnostic core
-library + GTK4 GUI application. Inspired by Ghostty's philosophy of native feel,
-feature-richness, and standards adherence. Competing with Nautilus/Thunar/Nemo/Dolphin,
-drawing feature inspiration from FilePilot, PCManFM, and SpaceFM.
+A native, feature-rich Linux file manager built in Zig with GTK4/libadwaita.
+Architecture: toolkit-agnostic core library + GTK4 GUI application. Inspired by
+Ghostty's philosophy of native feel, feature-richness, and standards adherence.
+Competing with Nautilus/Thunar/Nemo/Dolphin, drawing feature inspiration from
+FilePilot, PCManFM, and SpaceFM.
 
 ## Core Navigation & Browsing
 
