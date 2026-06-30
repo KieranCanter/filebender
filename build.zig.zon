@@ -1,0 +1,14 @@
+.{
+    .name = .filebender,
+    .version = "0.0.0-alpha.1+4",
+    .fingerprint = 0xb731c75a7ff1c2c9,
+    .minimum_zig_version = "0.16.0",
+    .dependencies = .{},
+    .paths = .{
+        "build.zig",
+        "build.zig.zon",
+        "src",
+        "LICENSE",
+        "README.md",
+    },
+}
